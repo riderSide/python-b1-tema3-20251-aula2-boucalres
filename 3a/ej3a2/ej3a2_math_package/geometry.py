@@ -11,8 +11,9 @@ def square_area(side_length: float) -> float:
     Returns:
     - float: the area of the square.
     """
-    # Write here your code
-    pass
+    if side_length < 0:
+        raise ValueError("La longitud del costat no pot ser negativa.")
+    return side_length * side_length
 
 
 def rectangle_area(base_length: float, height: float) -> float:
@@ -26,8 +27,9 @@ def rectangle_area(base_length: float, height: float) -> float:
     Returns:
     - float: the area of the rectangle.
     """
-    # Write here your code
-    pass
+    if base_length < 0 or height < 0:
+        raise ValueError("La longitud de la base i l'alçada han de ser positives.")
+    return base_length * height
 
 
 def triangle_area(base_length: float, height: float) -> float:
@@ -41,8 +43,9 @@ def triangle_area(base_length: float, height: float) -> float:
     Returns:
     - float: the area of the triangle.
     """
-    # Write here your code
-    pass
+    if base_length < 0 or height < 0:
+        raise ValueError("La longitud de la base i l'alçada han de ser positives.")
+    return (base_length * height) / 2
 
 
 def circle_area(radius: float) -> float:
@@ -55,5 +58,8 @@ def circle_area(radius: float) -> float:
     Returns:
     - float: the area of the circle
     """
-    # Write here your code
-    pass
+    if radius < 0:
+        raise ValueError("El radi no pot ser negatiu.")
+    
+    import math
+    return math.pi * (radius * radius)
